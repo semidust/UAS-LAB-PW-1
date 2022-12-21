@@ -7,6 +7,7 @@
   <head>
     <title><?= $title; ?></title>
     <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="https://kit.fontawesome.com/2d17ba45f4.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
@@ -24,7 +25,7 @@
                 <ul class="navbar-nav">
                 
                     <li class="nav-item">
-                        <a class="nav-link" href="">HOME</a>
+                        <a class="nav-link" href="home.php">HOME</a>
                     </li>
                     
                     <li class="nav-item dropdown">
@@ -40,16 +41,18 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="">PENDAFTARAN</a>
+                        <a class="nav-link" href="pendaftaran.php">PENDAFTARAN</a>
                     </li> 
                     
                 </ul>
                 </div>
-                <span class="ms-auto">
-                    <a class="nav-link" href="">
-                        <i class="fa-solid fa-user" style="color: white"></i>
+                    <a class="nav-link ms-auto" href="">
+                        <span class="material-symbols-outlined" style="color: white">
+                            account_circle
+                            <span class="tooltiptext">
+                                <p>Login</p></span>
+                        </span>
                     </a>
-                </span>
             </div>
         </nav> 
     </div>

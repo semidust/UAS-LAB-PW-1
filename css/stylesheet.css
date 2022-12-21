@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+*{
+    font-family: 'Inter';
+}
+
+h3 {
+    letter-spacing: 1pt;
+}
+
+.material-symbols-outlined .tooltiptext{
+    visibility: hidden;
+    width: 50px;
+    height: 20px;
+    background-color: black;
+    font-size: 10pt;;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+  /* Position the tooltip */
+    position: absolute;
+}
+
+.material-symbols-outlined:hover .tooltiptext {
+    visibility: visible;
+  }
