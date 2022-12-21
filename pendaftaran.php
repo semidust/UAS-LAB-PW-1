@@ -2,7 +2,7 @@
 
 $title = 'Pendaftaran';
 include 'layout/navbar.php';
-include 'layout/koneksi.php';
+include 'config/koneksi.php';
 
 ?>
 
