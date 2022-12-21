@@ -135,7 +135,7 @@
 <body>
     <div class="container">
         <div class="login">
-            <form action="ceklogin.php">
+            <form action="config/ceklogin.php">
                 <h1>Login</h1>
                 <hr>
                 <p>SD Negeri 043950</p>
