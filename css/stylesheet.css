@@ -1,23 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 *{
     font-family: 'Inter';
 }
 
-h3 {
-    letter-spacing: 1pt;
-}
-
 .material-symbols-outlined .tooltiptext{
     visibility: hidden;
-    width: 50px;
-    height: 20px;
+    width: 60px;
+    height: 60px;
     background-color: black;
     font-size: 10pt;;
     color: whitesmoke;
-    text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px 5px;
 
   /* Position the tooltip */
     position: absolute;
@@ -25,4 +21,11 @@ h3 {
 
 .material-symbols-outlined:hover .tooltiptext {
     visibility: visible;
-  }
+}
+
+.form-label {
+}
+
+::placeholder {
+    font-family: 'Poppins';
+}
