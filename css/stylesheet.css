@@ -28,4 +28,19 @@
 
 ::placeholder {
     font-family: 'Poppins';
+    text-transform: none;
+}
+
+.form-control {
+    text-transform: uppercase;
+    font-family: 'Poppins';
+}
+
+.form-select {
+    font-family: 'Poppins';
+    font-size: 12pt;
+}
+
+.form-select option{
+    font-family: 'Poppins';
 }
