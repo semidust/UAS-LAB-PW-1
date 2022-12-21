@@ -1,7 +1,7 @@
 <?php
 
 $title = 'SDN 043950';
-include 'layout/header.php';
+include 'layout/navbar.php';
 
 ?>
 
