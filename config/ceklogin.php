@@ -1,10 +1,10 @@
 <?php
 session_start();
-include 'config.php';
+include 'koneksi.php';
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 
-$query = mysqli_query($con, "SELECT * FROM user WHERE username='$username' AND password='$password'");
+$query = mysqli_query($db, "SELECT * FROM user WHERE username='$username' AND password='$password'");
 $data = mysqli_fetch_array($query);
 $jml = mysqli_num_rows($query);
 

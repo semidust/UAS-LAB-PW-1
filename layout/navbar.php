@@ -41,7 +41,7 @@ include 'head.php'
                         <span class="material-symbols-outlined ms-auto" style="color: white">
                             account_circle
                             <span class="tooltiptext">
-                                <a class="nav-link" href=""><p>Login</p></a>
+                                <a class="nav-link" href="/config/ceklogin.php"><p>Login</p></a>
                                 <a class="nav-link" href=""><p>Logout</p></a>
                             </span>
                         </span>

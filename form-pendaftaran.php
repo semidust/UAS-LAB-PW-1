@@ -2,6 +2,24 @@
 
 $title = 'Formulir Pendaftaran';
 include 'layout/head.php';
+include 'config/function.php';
+
+//cek apakah tombol tambah ditekan
+if (isset($_POST['daftar'])) {
+    if (create_data($_POST) > 0) {
+      echo "<script>
+              alert('Pendaftaran berhasil!');
+              document.location.href = 'pendaftaran.php';
+             </script>";
+    }
+  
+    else {
+      echo "<script>
+              alert('Pendaftaran gagal!');
+              document.location.href = 'form-pendaftaran.php';
+             </script>";
+    }
+}
 
 ?>
 
@@ -39,33 +57,31 @@ include 'layout/head.php';
         <div class="col-sm mt-3" style="padding: 30px 50px">
             <div class="mb-3">
                 <label for="alamat" class="form-label">Alamat Sesuai KK</label>
-                <textarea class="form-control" id="alamat" rows="2" style="width: 60%" placeholder="ALAMAT"></textarea>
+                <textarea class="form-control" id="alamat" name="alamat" rows="2" style="width: 60%" placeholder="ALAMAT"></textarea>
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail Orangtua (Ayah/Ibu)</label>
-                <input type="text" class="form-control" id="email" name="email" style="width: 60%; text-transform: none;" 
+                <input type="text" class="form-control" id="email" name="email" style="width: 60%;" 
                 placeholder="contoh: abc@gmail.com"  required>
             </div>
 
             <div class="mb-3">
                 <label for="no_telp" class="form-label">No HP Aktif (No WA)</label>
-                <input type="text" class="form-control" id="no_telp" name="no_telp" style="width: 40%; text-transform: none;" 
+                <input type="text" class="form-control" id="no_telp" name="no_telp" style="width: 40%;" 
                 placeholder="contoh: 081xxxxxxxxx"  required>
             </div>
 
         </div>
   </div>
 
-    <button type="submit" name="tambah" class="btn btn-success mt-4" style="float: left;">
-      <i class="fa-solid fa-plus"></i> Tambah
+    <button type="submit" name="daftar" class="btn btn-info mt-4" 
+    style="float: left; font-family: 'Quicksand'; color: white">
+       Daftar
     </button>
 
   </form>
 
-  <a href="javascript:window.history.go(-1);" class="btn btn-warning mt-4" style="margin-left: 4pt">
-      <i class="fa-solid fa-circle-arrow-left"></i> Kembali
-  </a>
 </div>
 
 
