@@ -1,7 +1,7 @@
 <?php
 
 $title = 'Formulir Pendaftaran';
-include 'layout/head.php';
+include 'layout/header.php';
 include 'config/function.php';
 
 //cek apakah tombol tambah ditekan
@@ -24,7 +24,7 @@ if (isset($_POST['daftar'])) {
 ?>
 
 <div class="container mt-4">
-    <h1>Formulir Pendaftaran Murid TA 2022/2023</h1>
+    <h3>Formulir Pendaftaran Murid TA 2022/2023</h3>
 
     <form action="" method="post">
     <div class="row mt-4" style="border: 1px solid grey;">
@@ -50,14 +50,15 @@ if (isset($_POST['daftar'])) {
 
             <div class="mb-3">
                 <label for="tanggal_lahir">Tanggal Lahir</label>
-                <input class="form-control" id="tanggal_lahir" name="tanggal_lahir" type="date" style="width: 60%">
+                <input class="form-control" id="tanggal_lahir" name="tanggal_lahir" type="date" style="width: 60%" required>
             </div>
+
         </div>
             
         <div class="col-sm mt-3" style="padding: 30px 50px">
             <div class="mb-3">
                 <label for="alamat" class="form-label">Alamat Sesuai KK</label>
-                <textarea class="form-control" id="alamat" name="alamat" rows="2" style="width: 60%" placeholder="ALAMAT"></textarea>
+                <textarea class="form-control" id="alamat" name="alamat" rows="2" style="width: 60%" placeholder="ALAMAT" required></textarea>
             </div>
 
             <div class="mb-3">
