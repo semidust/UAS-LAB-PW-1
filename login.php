@@ -2,7 +2,7 @@
 session_start();
 include 'config/koneksi.php';
 
-if(isset($_POST['submit'])){
+if(isset($_POST['login'])){
 
     $user= mysqli_real_escape_string($conn,$_POST['username']);
     $pass= mysqli_real_escape_string($conn,$_POST['password']);
@@ -176,7 +176,7 @@ if(isset($_POST['submit'])){
                 <label for="user-password" >&nbsp;Password</label>
                 <input id="user-password" class="form-content" type="password" name="password" required />
                 <div class="form-border"></div>
-                <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+                <input id="submit-btn" type="submit" name="login" value="LOGIN" />
 
                 <?php if (isset($error)) : ?>
                 <div class="alert alert-danger text-center mt-4" role="alert">
