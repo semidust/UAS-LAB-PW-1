@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'config/koneksi.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +25,7 @@
         
     }
     
-    .container {
+    #card {
         width: 100%;
         display: flex;
         max-width: 850px;
@@ -29,13 +34,14 @@
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     }
     
-    .login {
+    #card-content {
         width: 400px;
     }
     
     form {
         width: 250px;
-        margin: 60px auto;
+        margin: 90px auto;
+        margin-top:
     }
     
     h1 {
@@ -79,7 +85,7 @@
         border: 1px solid gray;
     }
     
-    button {
+    #submit-btn {
         border: none;
         outline: none;
         padding: 8px;
@@ -92,13 +98,13 @@
         background: #ffa12c;
     }
     
-    button:hover {
+    #submit-btn:hover {
         background: rgba(214, 86, 64, 1);
     }
     
     
     @media (max-width: 880px) {
-        .container {
+        #card {
             width: 100%;
             max-width: 750px;
             margin-left: 20px;
@@ -110,12 +116,12 @@
             margin: 20px auto;
         }
     
-        .login {
+        #card-content {
             width: 400px;
             padding: 20px;
         }
     
-        button {
+        #submit-btn {
             width: 100%;
         }
     
@@ -133,21 +139,46 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="login">
-            <form action="config/ceklogin.php">
+    <div id="card">
+        <div id="card-content">
+            <form method="post" class="form" action="login.php">
                 <h1>Login</h1>
                 <hr>
                 <p>SD Negeri 043950</p>
-                <label for="user-username">Username</label>
+                <label for="user-username" >&nbsp;username</label>
                 <input id="user-username" class="form-content" type="username" name="username" autocomplete="on" required />
-                <label for="user-password">Password</label>
+                <div class="form-border"></div>
+                <label for="user-password" >&nbsp;Password</label>
                 <input id="user-password" class="form-content" type="password" name="password" required />
-                <button>Login</button>
-                <p>
-                    <a href="#">Forgot Password?</a>
-                </p>
+                <div class="form-border"></div>
+                <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
             </form>
+            <?php 
+                if(isset($_POST['submit'])){
+
+                	$user= mysqli_real_escape_string($conn,$_POST['username']);
+                	$pass= mysqli_real_escape_string($conn,$_POST['password']);
+
+                	$cek  = mysqli_query($conn, "SELECT * FROM user WHERE username ='".$user."'");
+                	if(mysqli_num_rows($cek)> 0){
+
+                        $d = mysqli_fetch_object($cek);
+                         if(md5($pass) == $d->password){
+                            $_SESSION['status_login'] = true;
+                            $_SESSION['uname'] =$d->name;
+                            $_SESSION['pengguna']=$d->pengguna;
+                            echo "<script>window.location = 'home.php' </script>";
+                         }else{
+                           echo'<div class="alert alert-error"> PASSWORD SALAH </div>';
+                         }
+                    }else{
+                        echo'<div class ="alert-error"> USERNAME TIDAK DITEMUKAN </div>';
+                    }
+                    } 
+                          
+            
+                ?>
+
         </div>
         <div class="right">
             <img src="img/iconsd.png" alt="SD Negeri 043950">
