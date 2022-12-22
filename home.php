@@ -104,9 +104,9 @@ include 'layout/header.php';
         
         .fade {
             -webkit-animation-name: fade;
-            -webkit-animation-duration: 3s;
+            -webkit-animation-duration: 5s;
             animation-name: fade;
-            animation-duration: 3s;
+            animation-duration: 5s;
         }
         
         @-webkit-keyframes fade {
@@ -121,7 +121,7 @@ include 'layout/header.php';
         
         @keyframes fade {
             from {
-                opacity: .4;
+                opacity: .6;
             }    
             to {
                 opacity: 1;

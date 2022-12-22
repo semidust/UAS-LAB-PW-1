@@ -5,8 +5,9 @@ include 'layout/header.php';
 include 'config/function.php';
 
 //mengambil nisn dari data yg dipilih
+$nomor = (int)$_GET['nomor'];
 
-$pendaftaran = select("SELECT * FROM pendaftaran WHERE nisn = $nisn")[0];
+$pendaftaran = select("SELECT * FROM pendaftaran WHERE nomor = $nomor")[0];
 
 ?>
 

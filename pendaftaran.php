@@ -3,7 +3,7 @@
 $title = 'Pendaftaran';
 include 'layout/header.php';
 include 'config/function.php';
-$data_murid = select("SELECT * FROM pendaftaran");
+$data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
 
 ?>
 
@@ -46,13 +46,13 @@ $data_murid = select("SELECT * FROM pendaftaran");
                 <td><?= $pendaftaran['status']; ?></td>
                 <?php if (isset($_SESSION['status_login'])) : ?>
                 <td style="width:30%;">
-                    <a href="detail-data.php?nisnr=<?= $pendaftaran['nisn'];?>" class="btn btn-dark">
+                    <a href="detail-data.php?nomor=<?= $pendaftaran['nomor'];?>" class="btn btn-dark">
                         <i class="fa-solid fa-magnifying-glass"></i> Detail
                     </a>
-                    <a href="ubah-data.php?nisn=<?= $pendaftaran['nisn'];?>" class="btn btn-success">
+                    <a href="ubah-data.php?nomor=<?= $pendaftaran['nomor'];?>" class="btn btn-success">
                         <i class="fa-solid fa-pen-to-square"></i> Ubah
                     </a>
-                    <a href="hapus-data.php?nisn=<?= $pendaftaran['nisn'];?>" class="btn btn-danger" 
+                    <a href="hapus-data.php?nomor=<?= $pendaftaran['nomor'];?>" class="btn btn-danger" 
                         onclick="return confirm('Apakah ingin menghapus data ini?');">
                         <i class="fa-solid fa-trash"></i> Hapus
                     </a>
@@ -67,6 +67,6 @@ $data_murid = select("SELECT * FROM pendaftaran");
 
 <?php
 
-include 'layout/script.php'
+include 'layout/footer.php'
 
 ?>

@@ -1,16 +1,3 @@
-<?php
-
-include 'script.php';
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Footer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style type="text/css">
@@ -157,10 +144,13 @@ include 'script.php';
                 <a href="https://web.facebook.com/search/top/?q=Sigarang+Garang"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/sigarang2"><i class="fa fa-twitter"></i></a>
                 <a href="https://www.instagram.com/sigaranggarang/"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
             </div>
             <p class="footer-copyright">&copy; copyright 2022 SD Negeri 043950 Sigarang-garang</p>
         </div>
     </footer>
-</body>
-</html>
+
+<?php
+
+include 'script.php';
+
+?>

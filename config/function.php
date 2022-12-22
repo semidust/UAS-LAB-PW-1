@@ -19,12 +19,12 @@ function select($query)
 }
 
 //fungsi menghapus data 
-function delete_data($nisn)
+function delete_data($nomor)
 {
     global $db;
 
     //query hapus data 
-    $query = "DELETE FROM pendaftaran WHERE nisn = $nisn";
+    $query = "DELETE FROM pendaftaran WHERE nomor = $nomor";
 
     mysqli_query($db, $query);
 
@@ -43,10 +43,10 @@ function create_data($post)
     $alamat = $post['alamat'];
     $email = $post['email'];
     $no_telp = $post['no_telp'];
-    $status = "Belum Terverifikasi";
+    $status = "BELUM TERVERIFIKASI";
 
     //query tambah data
-    $query = "INSERT INTO pendaftaran VALUES('$nama', '$nisn', '$jenis_kelamin', 
+    $query = "INSERT INTO pendaftaran VALUES(null, '$nama', '$nisn', '$jenis_kelamin', 
     '$tanggal_lahir', '$alamat', '$email', '$no_telp', '$status')";
 
     mysqli_query($db, $query);
@@ -59,6 +59,7 @@ function update_data($post)
 {
     global $db;
 
+    $nomor = $post['nomor'];
     $nama = $post['nama'];
     $nisn = $post['nisn'];  
     $jenis_kelamin = $post['jenis_kelamin'];
@@ -71,7 +72,7 @@ function update_data($post)
     //query ubah data
     $query = "UPDATE pendaftaran SET nama = '$nama', nisn = '$nisn', jenis_kelamin = '$jenis_kelamin', 
     tanggal_lahir = '$tanggal_lahir', alamat = '$alamat', email = '$email', no_telp = '$no_telp', status = '$status'
-    WHERE nisn = $nisn";
+    WHERE nomor = $nomor";
 
     mysqli_query($db, $query);
 

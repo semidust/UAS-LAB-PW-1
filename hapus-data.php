@@ -3,9 +3,9 @@
 include 'config/function.php';
 
 //menerima nisn yang dipilih administrator
-$nisn = (int)$_GET['nisn'];
+$nomor = (int)$_GET['nomor'];
 
-if (delete_data($nisn) > 0) {
+if (delete_data($nomor) > 0) {
     echo "<script> 
             alert('Data berhasil dihapus!');
             document.location.href = 'pendaftaran.php';

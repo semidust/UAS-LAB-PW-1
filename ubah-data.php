@@ -5,9 +5,9 @@ include 'config/function.php';
 include 'layout/header.php';
 
 //mengambil nisn dari data yg dipilih
-$nisn = (int)$_GET['nisn'];
+$nomor = (int)$_GET['nomor'];
 
-$pendaftaran = select("SELECT * FROM pendaftaran WHERE nisn = $nisn")[0];
+$pendaftaran = select("SELECT * FROM pendaftaran WHERE nomor = $nomor")[0];
 
 //cek apakah tombol ubah ditekan
 if (isset($_POST['ubah'])) {
@@ -40,6 +40,7 @@ if (isset($_POST['ubah'])) {
   <form action="" method="post">
   <div class="row mt-4" style="border: 1px solid grey;">
         <div class="col-sm mt-3" style="padding: 30px 50px">
+            <input type="hidden" name="nomor" value="<?= $pendaftaran['nomor']; ?>">
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap </label>
                 <input type="text" class="form-control" id="nama" name="nama" style="width: 60%" 
@@ -93,8 +94,8 @@ if (isset($_POST['ubah'])) {
                 <label for="status" class="form-label">Status</label>
                 <select class="form-select" id="status" name="status" style="width: 60%" required>
                     <?php $status = $pendaftaran['status']; ?>
-                    <option value="BELUM TERVERIFIKASI" <?= $jenis_kelamin == 'BELUM TERVERIFIKASI' ? 'selected' : null ?>>Belum Terverifikasi</option>
-                    <option value="TERVERIFIKASI" <?= $jenis_kelamin == 'TERVERIFIKASI' ? 'selected' : null ?>>Terverifikasi</option>
+                    <option value="BELUM TERVERIFIKASI" <?= $status == 'BELUM TERVERIFIKASI' ? 'selected' : null ?>>Belum Terverifikasi</option>
+                    <option value="TERVERIFIKASI" <?= $status == 'TERVERIFIKASI' ? 'selected' : null ?>>Terverifikasi</option>
                 </select>
             </div>
         </div>
