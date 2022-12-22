@@ -259,10 +259,13 @@ include 'layout/header.php';
             <h2>Tentang Sekolah</h2>
             <p>SD NEGERI 043950 SIGARANG-GARANG adalah salah satu satuan pendidikan dengan jenjang SD di DESA SIGARANG-GARANG, Kec. Naman Teran, Kab. Karo, Sumatera Utara. Dalam menjalankan kegiatannya, SD NEGERI 043950 SIGARANG-GARANG berada di bawah naungan Kementerian Pendidikan dan Kebudayaan. Dengan akreditasi C, berdasarkan sertifikat 860/BANSM/PROVSU/LL/XII/2018.</p>
             <p>SD NEGERI 043950 SIGARANG-GARANG menyediakan listrik untuk membantu kegiatan belajar mengajar. Sumber listrik yang digunakan oleh SD NEGERI 043950 SIGARANG-GARANG berasal dari PLN. SD NEGERI 043950 SIGARANG-GARANG menyediakan akses internet yang dapat digunakan untuk mendukung kegiatan belajar mengajar menjadi lebih mudah. Provider yang digunakan SD NEGERI 043950 SIGARANG-GARANG untuk sambungan internetnya adalah Telkomsel Flash.</p>
+            <br>
+            <h2>Pendaftaran Siswa Baru</h2>
+            <p>Telah dibuka pendaftaran siswa baru, tahun ajaran 2022/2023. Segera cek persyaratan dan isi formulir di link berikut <a href="pendaftaran.php">link pendaftaran</a>.</p>
         </div>
     </section>
 
-    
+
 </body>
 
 </html>
