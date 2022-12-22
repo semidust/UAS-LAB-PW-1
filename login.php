@@ -1,12 +1,38 @@
 <?php
 session_start();
 include 'config/koneksi.php';
+
+if(isset($_POST['submit'])){
+
+    $user= mysqli_real_escape_string($conn,$_POST['username']);
+    $pass= mysqli_real_escape_string($conn,$_POST['password']);
+
+    $cek  = mysqli_query($conn, "SELECT * FROM user WHERE username ='".$user."'");
+    if(mysqli_num_rows($cek)> 0){
+
+        $d = mysqli_fetch_object($cek);
+         if(md5($pass) == $d->password) {
+            $_SESSION['status_login'] = true;
+            $_SESSION['uname'] =$d->name;
+            $_SESSION['pengguna']=$d->pengguna;
+            echo "<script>window.location = 'home.php' </script>";
+         } 
+         else {
+           $error = true;
+         }
+    }
+    
+    else{
+        $error = true;
+    }
+    } 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style type="text/css">
     * {
         margin: 0;
@@ -35,13 +61,12 @@ include 'config/koneksi.php';
     }
     
     #card-content {
-        width: 400px;
+        width: 600px;
     }
     
     form {
         width: 250px;
-        margin: 90px auto;
-        margin-top:
+        margin: auto;
     }
     
     h1 {
@@ -152,38 +177,22 @@ include 'config/koneksi.php';
                 <input id="user-password" class="form-content" type="password" name="password" required />
                 <div class="form-border"></div>
                 <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
+
+                <?php if (isset($error)) : ?>
+                <div class="alert alert-danger text-center mt-4" role="alert">
+                    Username/Password SALAH!
+                </div>
+                <?php endif; ?>
             </form>
-            <?php 
-                if(isset($_POST['submit'])){
-
-                	$user= mysqli_real_escape_string($conn,$_POST['username']);
-                	$pass= mysqli_real_escape_string($conn,$_POST['password']);
-
-                	$cek  = mysqli_query($conn, "SELECT * FROM user WHERE username ='".$user."'");
-                	if(mysqli_num_rows($cek)> 0){
-
-                        $d = mysqli_fetch_object($cek);
-                         if(md5($pass) == $d->password){
-                            $_SESSION['status_login'] = true;
-                            $_SESSION['uname'] =$d->name;
-                            $_SESSION['pengguna']=$d->pengguna;
-                            echo "<script>window.location = 'home.php' </script>";
-                         }else{
-                           echo'<div class="alert alert-error"> PASSWORD SALAH </div>';
-                         }
-                    }else{
-                        echo'<div class ="alert-error"> USERNAME TIDAK DITEMUKAN </div>';
-                    }
-                    } 
-                          
-            
-                ?>
 
         </div>
         <div class="right">
             <img src="img/iconsd.png" alt="SD Negeri 043950">
         </div>
     </div>
-</body>
 
-</html>
+<?php 
+
+include 'layout/script.php';
+
+?>
