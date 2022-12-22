@@ -8,8 +8,7 @@
 
 .material-symbols-outlined .tooltiptext{
     visibility: hidden;
-    width: 60px;
-    height: 60px;
+    width: auto;
     background-color: black;
     font-size: 10pt;;
     color: whitesmoke;

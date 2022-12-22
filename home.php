@@ -1,21 +1,9 @@
 <?php
 
-session_start();
-
 $title = 'SDN 043950';
 include 'layout/header.php';
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDN 043950</title>
-    <link rel="stylesheet" href="style.css">
 
     <style type="text/css">
         * {
@@ -25,20 +13,16 @@ include 'layout/header.php';
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
-            background-color: #bbb;
+            background-color: #F2F2F2;
         }
         
         .banner h1 {
-            margin: 75px 200px;
             color: rgb(6, 7, 7);
             z-index: 1;
             padding: 20px 25px;
             border: 5px solid rgb(6, 7, 7);
         }
 
-        .container {
-            padding: 80px 0 0 0;
-        }
         
         /* Slideshow container */
         .content-slide {
@@ -54,7 +38,8 @@ include 'layout/header.php';
         
         img {
             vertical-align: middle;
-            width:100%;height: 400px;
+            width: 100%;
+            height: auto;
         }
         
         .prev,
@@ -184,7 +169,7 @@ include 'layout/header.php';
 
 <body>
     <section class="banner">
-        <center><h1>SD NEGERI 043950 <br> SIGARANG - GARANG</h1></center>
+        <center><h1>SD NEGERI 043950 SIGARANG - GARANG</h1></center>
     </section>
 
     <div class="container">
@@ -254,24 +239,30 @@ include 'layout/header.php';
             dot[slideIndex - 1].className += " active";
         }
     </script>
+
     <section class="about">
         <div class ="container">
-            <h2>Tentang Sekolah</h2>
-            <p>SD NEGERI 043950 SIGARANG-GARANG adalah salah satu satuan pendidikan dengan jenjang SD di DESA SIGARANG-GARANG, Kec. Naman Teran, Kab. Karo, Sumatera Utara. Dalam menjalankan kegiatannya, SD NEGERI 043950 SIGARANG-GARANG berada di bawah naungan Kementerian Pendidikan dan Kebudayaan. Dengan akreditasi C, berdasarkan sertifikat 860/BANSM/PROVSU/LL/XII/2018.</p>
-            <p>SD NEGERI 043950 SIGARANG-GARANG menyediakan listrik untuk membantu kegiatan belajar mengajar. Sumber listrik yang digunakan oleh SD NEGERI 043950 SIGARANG-GARANG berasal dari PLN. SD NEGERI 043950 SIGARANG-GARANG menyediakan akses internet yang dapat digunakan untuk mendukung kegiatan belajar mengajar menjadi lebih mudah. Provider yang digunakan SD NEGERI 043950 SIGARANG-GARANG untuk sambungan internetnya adalah Telkomsel Flash.</p>
-            <br>
-            <h2>Pendaftaran Siswa Baru</h2>
-            <p>Telah dibuka pendaftaran siswa baru, tahun ajaran 2022/2023. Segera cek persyaratan dan isi formulir di link berikut <a href="pendaftaran.php">link pendaftaran</a>.</p>
+            <h2 style="text-align: center">Tentang Sekolah</h2>
+            <p>SD NEGERI 043950 SIGARANG-GARANG adalah salah satu satuan pendidikan dengan jenjang SD di DESA SIGARANG-GARANG, 
+                Kec. Naman Teran, Kab. Karo, Sumatera Utara. Dalam menjalankan kegiatannya, SD NEGERI 043950 SIGARANG-GARANG 
+                berada di bawah naungan Kementerian Pendidikan dan Kebudayaan. Dengan akreditasi C, 
+                berdasarkan sertifikat 860/BANSM/PROVSU/LL/XII/2018.</p>
+            <p>SD NEGERI 043950 SIGARANG-GARANG menyediakan listrik untuk membantu kegiatan belajar mengajar. 
+                Sumber listrik yang digunakan oleh SD NEGERI 043950 SIGARANG-GARANG berasal dari PLN. 
+                SD NEGERI 043950 SIGARANG-GARANG menyediakan akses internet yang dapat digunakan untuk mendukung kegiatan 
+                belajar mengajar menjadi lebih mudah. Provider yang digunakan SD NEGERI 043950 SIGARANG-GARANG untuk sambungan 
+                internetnya adalah Telkomsel Flash.</p>
+        </div>
+
+        <div class="container" style="margin-top: 60px">
+        <h2 style="text-align: center">Pendaftaran Siswa Baru</h2>
+            <p>Telah dibuka pendaftaran siswa baru, tahun ajaran 2022/2023. 
+                Segera cek persyaratan dan isi formulir di link berikut 
+                <a href="pendaftaran.php">link pendaftaran</a>.
+            </p>
         </div>
     </section>
 
-
-</body>
-
-</html>
-
-
-    
 <?php
 
 include 'layout/footer.php';

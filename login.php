@@ -4,17 +4,20 @@ include 'config/koneksi.php';
 
 if(isset($_POST['login'])){
 
-    $user= mysqli_real_escape_string($conn,$_POST['username']);
-    $pass= mysqli_real_escape_string($conn,$_POST['password']);
+    $user= mysqli_real_escape_string($db,$_POST['username']);
+    $pass= mysqli_real_escape_string($db,$_POST['password']);
 
-    $cek  = mysqli_query($conn, "SELECT * FROM user WHERE username ='".$user."'");
+    $cek  = mysqli_query($db, "SELECT * FROM user WHERE username ='".$user."'");
     if(mysqli_num_rows($cek)> 0){
 
         $d = mysqli_fetch_object($cek);
          if(md5($pass) == $d->password) {
             $_SESSION['status_login'] = true;
             $_SESSION['pengguna']=$d->pengguna;
-            echo "<script>window.location = 'home.php' </script>";
+            $_SESSION['uname']=$d->nama;
+            echo "<script> 
+                window.location = 'home.php'; 
+                </script>";
          } 
          else {
            $error = true;

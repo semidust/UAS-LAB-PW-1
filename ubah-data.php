@@ -27,7 +27,13 @@ if (isset($_POST['ubah'])) {
 }
 
 ?>
- 
+
+<style type=text/css>
+    body {
+        background-color: #F2F2F2;
+    }
+</style>
+
 <div class="container mt-4">
   <h3>Ubah Data <?= $pendaftaran['nama'] ?></h3>
 

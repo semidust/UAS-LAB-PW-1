@@ -1,20 +1,21 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['login'])) {
+if (isset($_SESSION['status_login'])) {
+    $_SESSION = [];
+    session_unset();
+    session_destroy();
+
     echo "<script>
-          alert('Anda belum login!');
+          alert('Berhasil logout!');
           document.location.href = 'javascript:window.history.go(-1)';
           </script>";
-    exit;
 }
 
-$_SESSION = [];
-
-session_unset();
-session_destroy();
+else {
 echo "<script>
-      alert('Berhasil logout!');
+      alert('Anda belum login!');
       document.location.href = 'javascript:window.history.go(-1)';
       </script>";
+}
 ?>

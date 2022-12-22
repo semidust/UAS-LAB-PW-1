@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!doctype html>
 <html>
    <head>
@@ -31,9 +37,7 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Visi dan Misi</a></li>
-                            <li><a class="dropdown-item" href="">Ekstrakurikuler</a></li>
-                            <li><a class="dropdown-item" href="">Jadwal Kegiatan</a></li>
+                            <li><a class="dropdown-item" href="visi-misi.php">Visi dan Misi</a></li>
                         </ul>
                     </li>
 
@@ -41,15 +45,33 @@
                         <a class="nav-link" href="pendaftaran.php">PENDAFTARAN</a>
                     </li> 
                     
+                    <li class="nav-item ms-auto">
+                        
+                    </li>
                 </ul>
                 </div>
+                    
+                    <?php if (!isset($_SESSION['status_login'])) : ?>
+                    <a class="nav-link" href="login.php">
                         <span class="material-symbols-outlined ms-auto" style="color: white">
                             account_circle
                             <span class="tooltiptext">
-                                <a class="nav-link" href="login.php"><p>Login</p></a>
-                                <a class="nav-link" href="logout.php"><p>Logout</p></a>
+                                <p>Login</p>
                             </span>
                         </span>
+                    </a>
+                    <?php endif; ?>
+
+                    <?php if (isset($_SESSION['status_login'])) : ?>
+                    <a class="nav-link" href="logout.php">
+                        <span class="material-symbols-outlined ms-auto" style="color: white;">
+                            logout
+                            <span class="tooltiptext">
+                                <p>Logout</p>
+                            </span>
+                        </span>
+                    </a>
+                    <?php endif; ?>
             </div>
         </nav> 
     </div>

@@ -10,7 +10,13 @@ $nomor = (int)$_GET['nomor'];
 $pendaftaran = select("SELECT * FROM pendaftaran WHERE nomor = $nomor")[0];
 
 ?>
- 
+
+<style type=text/css>
+    body {
+        background-color: #F2F2F2;
+    }
+</style>
+
   <div class="container mt-4">
     <h3>Data <?= $pendaftaran['nama'] ?></h3>
     <br>

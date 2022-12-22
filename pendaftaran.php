@@ -7,6 +7,12 @@ $data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
 
 ?>
 
+<style type=text/css>
+    body {
+        background-color: #F2F2F2;
+    }
+</style>
+
 <div class="container mt-4">
     <h2>Pendaftaran Murid Baru SDN 043950</h2>
     <div>
@@ -24,7 +30,9 @@ $data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
                 <th>Nama</th>
                 <th>NISN</th>
                 <th>Status</th>
+                <?php if (isset($_SESSION['status_login'])) : ?>
                 <th>Aksi</th>
+                <?php endif; ?>
             </tr>  
         </thead>
 
@@ -36,6 +44,7 @@ $data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
                 <td><?= $pendaftaran['nama']; ?></td>
                 <td><?= $pendaftaran['nisn']; ?></td>
                 <td><?= $pendaftaran['status']; ?></td>
+                <?php if (isset($_SESSION['status_login'])) : ?>
                 <td style="width:30%;">
                     <a href="detail-data.php?nomor=<?= $pendaftaran['nomor'];?>" class="btn btn-dark">
                         <i class="fa-solid fa-magnifying-glass"></i> Detail
@@ -48,6 +57,7 @@ $data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
                         <i class="fa-solid fa-trash"></i> Hapus
                     </a>
                 </td>
+                <?php endif; ?>
             </tr>
             <?php endforeach; ?>
         </tbody>

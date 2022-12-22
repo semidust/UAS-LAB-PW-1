@@ -1,5 +1,5 @@
 <?php
-   $conn = mysqli_connect('localhost', 'root','','sekolah') or die ('gagal terhubung ke database');
+   $db = mysqli_connect('localhost', 'root','','sekolah') or die ('gagal terhubung ke database');
 
 /*cek koneksi
 if (!$db) {

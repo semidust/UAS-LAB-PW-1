@@ -23,6 +23,12 @@ if (isset($_POST['daftar'])) {
 
 ?>
 
+<style type=text/css>
+    body {
+        background-color: #F2F2F2;
+    }
+</style>
+
 <div class="container mt-4">
     <h3>Formulir Pendaftaran Murid TA 2022/2023</h3>
 

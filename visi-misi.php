@@ -1,18 +1,9 @@
 <?php
 
-session_start();
-
-$title = 'SDN 043950';
-include 'header.php';
+$title = 'Visi dan Misi';
+include 'layout/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDN 043950</title>
     <style type="text/css">
         * {
             box-sizing: border-box;
@@ -21,7 +12,7 @@ include 'header.php';
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
-            background-color: #bbb;
+            background-color: #F2F2F2;
         }
         
         .banner h1 {
@@ -56,6 +47,7 @@ include 'header.php';
             <div class ="container">
                 <h2>VISI</h2>
                 <center><p>Unggul dalam bidang akademik dan non akademik, beriman, berbudaya dan berbudi pekerti luhur dalam perilaku.</p></center>
+                <br><br>
                 <h2>MISI</h2>
                 <p>1. Memacu siswa untuk berprestasi dalam bidang akademik dan non akademik minimal sampai tingkat kabupaten.</p>
                 <p>2. Mewujudkan prestasi sekolah di bidang akademik dan non akademik sampai pada tingkat nasional dan internasional.</p>
@@ -72,5 +64,9 @@ include 'header.php';
                 <p>13. Membiasakan peserta didik menjaga kebersihan lingkungan untuk mendukung program clean and green.</p>
             </div>
         </section>
-    </body>
-</html>
+
+<?php
+
+include 'layout/footer.php';
+
+?>
