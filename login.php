@@ -13,7 +13,6 @@ if(isset($_POST['login'])){
         $d = mysqli_fetch_object($cek);
          if(md5($pass) == $d->password) {
             $_SESSION['status_login'] = true;
-            $_SESSION['uname'] =$d->name;
             $_SESSION['pengguna']=$d->pengguna;
             echo "<script>window.location = 'home.php' </script>";
          } 
