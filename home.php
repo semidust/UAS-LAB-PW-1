@@ -13,7 +13,7 @@ include 'layout/header.php';
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
-            background-color: #F2F2F2;
+            background-color: #D3D3D3;
         }
         
         .banner h1 {
@@ -104,9 +104,9 @@ include 'layout/header.php';
         
         .fade {
             -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
+            -webkit-animation-duration: 3s;
             animation-name: fade;
-            animation-duration: 1.5s;
+            animation-duration: 3s;
         }
         
         @-webkit-keyframes fade {

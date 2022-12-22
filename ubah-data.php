@@ -4,10 +4,10 @@ $title = 'Ubah Data';
 include 'config/function.php'; 
 include 'layout/header.php';
 
-//mengambil nomor dari data yg dipilih
-$nomor = (int)$_GET['nomor'];
+//mengambil nisn dari data yg dipilih
+$nisn = (int)$_GET['nisn'];
 
-$pendaftaran = select("SELECT * FROM pendaftaran WHERE nomor = $nomor")[0];
+$pendaftaran = select("SELECT * FROM pendaftaran WHERE nisn = $nisn")[0];
 
 //cek apakah tombol ubah ditekan
 if (isset($_POST['ubah'])) {
@@ -30,7 +30,7 @@ if (isset($_POST['ubah'])) {
 
 <style type=text/css>
     body {
-        background-color: #F2F2F2;
+        background-color: #D3D3D3;
     }
 </style>
 
@@ -40,7 +40,6 @@ if (isset($_POST['ubah'])) {
   <form action="" method="post">
   <div class="row mt-4" style="border: 1px solid grey;">
         <div class="col-sm mt-3" style="padding: 30px 50px">
-            <input type="hidden" name="nomor" value="<?= $pendaftaran['nomor']; ?>">
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap </label>
                 <input type="text" class="form-control" id="nama" name="nama" style="width: 60%" 

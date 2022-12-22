@@ -25,7 +25,7 @@ if (isset($_POST['daftar'])) {
 
 <style type=text/css>
     body {
-        background-color: #F2F2F2;
+        background-color: #D3D3D3;
     }
 </style>
 
@@ -82,7 +82,7 @@ if (isset($_POST['daftar'])) {
         </div>
   </div>
 
-    <button type="submit" name="daftar" class="btn btn-info mt-4" 
+    <button type="submit" name="daftar" class="btn btn-primary mt-4" 
     style="float: left; font-family: 'Quicksand'; color: white">
        Daftar
     </button>

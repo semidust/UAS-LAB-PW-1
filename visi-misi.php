@@ -12,7 +12,7 @@ include 'layout/header.php';
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
-            background-color: #F2F2F2;
+            background-color: #D3D3D3;
         }
         
         .banner h1 {

@@ -3,13 +3,13 @@
 $title = 'Pendaftaran';
 include 'layout/header.php';
 include 'config/function.php';
-$data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
+$data_murid = select("SELECT * FROM pendaftaran");
 
 ?>
 
 <style type=text/css>
     body {
-        background-color: #F2F2F2;
+        background-color: #D3D3D3;
     }
 </style>
 
@@ -46,13 +46,13 @@ $data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
                 <td><?= $pendaftaran['status']; ?></td>
                 <?php if (isset($_SESSION['status_login'])) : ?>
                 <td style="width:30%;">
-                    <a href="detail-data.php?nomor=<?= $pendaftaran['nomor'];?>" class="btn btn-dark">
+                    <a href="detail-data.php?nisnr=<?= $pendaftaran['nisn'];?>" class="btn btn-dark">
                         <i class="fa-solid fa-magnifying-glass"></i> Detail
                     </a>
-                    <a href="ubah-data.php?nomor=<?= $pendaftaran['nomor'];?>" class="btn btn-success">
+                    <a href="ubah-data.php?nisn=<?= $pendaftaran['nisn'];?>" class="btn btn-success">
                         <i class="fa-solid fa-pen-to-square"></i> Ubah
                     </a>
-                    <a href="hapus-data.php?nomor=<?= $pendaftaran['nomor'];?>" class="btn btn-danger" 
+                    <a href="hapus-data.php?nisn=<?= $pendaftaran['nisn'];?>" class="btn btn-danger" 
                         onclick="return confirm('Apakah ingin menghapus data ini?');">
                         <i class="fa-solid fa-trash"></i> Hapus
                     </a>

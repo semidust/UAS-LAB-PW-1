@@ -4,16 +4,15 @@ $title = 'Pendaftaran';
 include 'layout/header.php'; 
 include 'config/function.php';
 
-//mengambil nomor dari data yg dipilih
-$nomor = (int)$_GET['nomor'];
+//mengambil nisn dari data yg dipilih
 
-$pendaftaran = select("SELECT * FROM pendaftaran WHERE nomor = $nomor")[0];
+$pendaftaran = select("SELECT * FROM pendaftaran WHERE nisn = $nisn")[0];
 
 ?>
 
 <style type=text/css>
     body {
-        background-color: #F2F2F2;
+        background-color: #D3D3D3;
     }
 </style>
 
