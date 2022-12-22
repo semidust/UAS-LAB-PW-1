@@ -10,7 +10,7 @@ $data_murid = select("SELECT * FROM pendaftaran ORDER BY nomor");
 <div class="container mt-4">
     <h2>Pendaftaran Murid Baru SDN 043950</h2>
     <div>
-        <a href="form-pendaftaran.php" target="_blank">
+        <a href="form-pendaftaran.php">
             <button type="button" class="btn btn-dark mt-2 mb-4"
             style="float: left; font-family: 'Quicksand';">Formulir Pendaftaran</button>
         </a>

@@ -81,6 +81,11 @@ if (isset($_POST['daftar'])) {
        Daftar
     </button>
 
+    <a href="javascript:window.history.go(-1);" class="btn btn-dark mt-4" style="margin-left: 4pt">
+       Kembali
+    </a>
+
+
   </form>
 
 </div>
