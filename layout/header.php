@@ -8,6 +8,7 @@ session_start();
 <html>
    <head>
     <title><?= $title; ?></title>
+    <link rel="icon" type="image/x-icon" href="./img/iconsd.png">
     <link rel="stylesheet" href="./css/stylesheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="https://kit.fontawesome.com/2d17ba45f4.js" crossorigin="anonymous"></script>
