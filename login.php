@@ -13,8 +13,6 @@ if(isset($_POST['login'])){
         $d = mysqli_fetch_object($cek);
          if(md5($pass) == $d->password) {
             $_SESSION['status_login'] = true;
-            $_SESSION['pengguna']=$d->pengguna;
-            $_SESSION['uname']=$d->nama;
             echo "<script> 
                 window.location = 'home.php'; 
                 </script>";
@@ -34,6 +32,7 @@ if(isset($_POST['login'])){
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="./img/iconsd.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style type="text/css">
     * {

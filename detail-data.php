@@ -1,6 +1,6 @@
 <?php 
 
-$title = 'Pendaftaran';
+$title = 'Detail Data';
 include 'layout/header.php'; 
 include 'config/function.php';
 
