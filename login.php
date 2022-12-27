@@ -7,10 +7,13 @@ if(isset($_POST['login'])){
     $user= mysqli_real_escape_string($db,$_POST['username']);
     $pass= mysqli_real_escape_string($db,$_POST['password']);
 
+
+    //cek apakah terdapat username
     $cek  = mysqli_query($db, "SELECT * FROM user WHERE username ='".$user."'");
     if(mysqli_num_rows($cek)> 0){
 
         $d = mysqli_fetch_object($cek);
+        //cek password
          if(md5($pass) == $d->password) {
             $_SESSION['status_login'] = true;
             echo "<script> 

@@ -2,9 +2,9 @@
 session_start();
 
 if (isset($_SESSION['status_login'])) {
-    $_SESSION = [];
+    $_SESSION = []; //dikosongkan
     session_unset();
-    session_destroy();
+    session_destroy(); 
 
     echo "<script>
           alert('Berhasil logout!');
@@ -12,11 +12,5 @@ if (isset($_SESSION['status_login'])) {
           </script>";
 }
 
-else {
-echo "<script>
-      alert('Anda belum login!');
-      document.location.href = 'javascript:window.history.go(-1)';
-      </script>";
-}
 
 ?>

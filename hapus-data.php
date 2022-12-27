@@ -2,7 +2,7 @@
 
 include 'config/function.php';
 
-//menerima nisn yang dipilih administrator
+//menerima nomor yang dipilih administrator
 $nomor = (int)$_GET['nomor'];
 
 if (delete_data($nomor) > 0) {
